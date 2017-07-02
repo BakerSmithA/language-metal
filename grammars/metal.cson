@@ -1,0 +1,82 @@
+'scopeName': 'source.metal'
+'name': 'Metal'
+'fileTypes': ['al']
+'patterns': [
+    {
+        'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
+        'name': 'constant.numeric.metal'
+    },
+    {
+        'begin': '\"'
+        'end': '\"'
+        'name': 'string.quoted.double.metal'
+    },
+    {
+        'begin': '\''
+        'end': '\''
+        'name': 'string.quoted.single.metal'
+    },
+    {
+        'comment': 'keywords that are used to operate on the tape'
+        'name': 'keyword.control.tape.metal'
+        'match': '\\b(read|write|left|right)\\b'
+    },
+    {
+        'comment': 'keywords that are used to enter a halt state'
+        'name': 'keyword.control.halt.metal'
+        'match': '\\b(accept|reject)\\b'
+    },
+    {
+        'comment': 'keywords that are used for assignment'
+        'name': 'keyword.control.assign.metal'
+        'match': '\\b(let)\\b'
+    },
+    {
+        'comment': 'keywords that delimit flow conditionals'
+        'name': 'keyword.control.conditional.metal'
+        'match': '\\b(if|else)\\b'
+    },
+    {
+        'comment': 'keywords that delimit loops'
+        'name': 'keyword.control.repeat.metal'
+        'match': '\\b(while)\\b'
+    },
+    {
+        'comment': 'keyword operators that evaluate to True or False'
+        'match': '\\b(and|not|or|True|False)\\b'
+        'name': 'keyword.operator.logical.metal'
+    },
+    {
+        'comment': 'keywords that haven\'t fit into other groups (yet).'
+        'name': 'keywords.other.metal'
+        'match': '\\b(print)\\b'
+    },
+    {
+        'match': '<\\=|>\\=|\\=\\=|<|>|\\!\\='
+        'name': 'keyword.operator.comparison.metal'
+    }
+    {
+        'match': '\\='
+        'name': 'keyword.operator.assignment.metal'
+    },
+    {
+        'match': '\\b(func)\\s+([a-z]\\w*)([\\w\\s]+)'
+        'captures':
+            '1':
+                'name': 'keyword.control.metal'
+            '2':
+                'name': 'entity.name.function.metal'
+            '3':
+                'name': 'entity.name.parameter.metal'
+        'name': 'meta.function.metal'
+    },
+    {
+        'name': 'comment.block.metal'
+        'match': '\\/\\/(.*)'
+    },
+    {
+        'name': 'comment.block.metal'
+        'begin': '\\/\\*'
+        'end': '\\*\\/'
+    }
+]
