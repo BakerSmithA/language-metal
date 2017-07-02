@@ -63,12 +63,24 @@
         'match': '\\b(func)\\s+([a-z]\\w*)([\\w\\s]+)'
         'captures':
             '1':
-                'name': 'keyword.control.metal'
+                'name': 'storage.type.function.python'
             '2':
                 'name': 'entity.name.function.metal'
             '3':
                 'name': 'entity.name.parameter.metal'
         'name': 'meta.function.metal'
+    },
+    {
+        'match': '\\b(import)\\s+([A-Z]\\w*)([\\w\\.]+)?'
+        'captures':
+            '1':
+                'name': 'keyword.control.import.metal'
+            '2':
+                'name': 'entity.name.import.metal'
+            '3':
+                'name': 'entity.name.import.metal'
+
+        'name': 'meta.import.metal'
     },
     {
         'name': 'comment.block.metal'
