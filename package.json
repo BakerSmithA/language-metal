@@ -1,0 +1,17 @@
+{
+  "name": "language-metal",
+  "version": "0.0.0",
+  "description": "Metal language support for Atom",
+  "engines": {
+    "atom": "*"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BakerSmithA/language-metal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BakerSmithA/language-metal/issues"
+  },
+  "license": "MIT"
+}
