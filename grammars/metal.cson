@@ -90,5 +90,9 @@
         'name': 'comment.block.metal'
         'begin': '\\/\\*'
         'end': '\\*\\/'
+    },
+    {
+        'name': 'keyword.control.import.python'
+        'match': '\\b(import)\\b'
     }
 ]
