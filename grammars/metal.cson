@@ -60,16 +60,23 @@
         'name': 'keyword.operator.assignment.metal'
     },
     {
-        'match': '\\b(func)\\s+([a-z]\\w*)([\\w\\s]+)'
+        'match': '\\b(func)\\s+([a-z]\\w*)'
         'captures':
             '1':
-                'name': 'storage.type.function.python'
+                'name': 'storage.type.function.metal'
             '2':
                 'name': 'entity.name.function.metal'
-            '3':
-                'name': 'entity.name.parameter.metal'
         'name': 'meta.function.metal'
     },
+    {
+        'match': '(?:\\s+(\\w+):(Sym|Tape))'
+        'captures':
+            '1':
+                'name': 'entity.name.parameter.metal'
+            '2':
+                'name': 'storage.type'
+        'name': 'meta.function.arguments.metal'
+    }
     {
         'match': '\\b(import)\\s+([A-Z]\\w*)([\\w\\.]+)?'
         'captures':
@@ -92,7 +99,8 @@
         'end': '\\*\\/'
     },
     {
-        'name': 'keyword.control.import.python'
+        'name': 'keyword.control.import'
         'match': '\\b(import)\\b'
-    }
+    },
+
 ]
