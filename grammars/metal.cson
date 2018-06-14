@@ -18,7 +18,7 @@
     },
     {
         'comment': 'keywords that are used to operate on the tape'
-        'name': 'keyword.control.tape.metal'
+        'name': 'meta.function.metal'
         'match': '\\b(read|write|left|right)\\b'
     },
     {
@@ -48,7 +48,7 @@
     },
     {
         'comment': 'keywords that haven\'t fit into other groups (yet).'
-        'name': 'keywords.other.metal'
+        'name': 'meta.function.metal'
         'match': '\\b(print)\\b'
     },
     {
@@ -69,13 +69,21 @@
         'name': 'meta.function.metal'
     },
     {
-        'match': '(?:\\s+(\\w+):(Sym|Tape))'
+        'match': '(?:\\s+(\\w+):([A-Z]\\w*))'
         'captures':
             '1':
                 'name': 'entity.name.parameter.metal'
             '2':
                 'name': 'storage.type'
         'name': 'meta.function.arguments.metal'
+    },
+    {
+        'match': '(struct)\\s+([A-Z]\\w*)'
+        'captures':
+            '1':
+                'name': 'storage.type.struct.metal'
+            '2':
+                'name': 'entity.name.struct.metal'
     }
     {
         'match': '\\b(import)\\s+([A-Z]\\w*)([\\w\\.]+)?'
