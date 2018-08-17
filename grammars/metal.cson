@@ -60,7 +60,7 @@
         'name': 'keyword.operator.assignment.metal'
     },
     {
-        'match': '\\b(func)\\s+([a-z]\\w*)'
+        'match': '\\b(proc)\\s+([a-z]\\w*)'
         'captures':
             '1':
                 'name': 'storage.type.function.metal'
